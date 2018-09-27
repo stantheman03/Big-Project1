@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Recipe Finder!</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+
+
+<body>
+    
+
+    <div class="jcontainer">
+            
+        <div class="jumbotron"><div class="page-header">
+                    <h1>Recipe Finder</h1>
+                </div>
+                <div class="btn-group" id="recipeDrop">
+                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="myRecipesButton">
+                        <h3>My Recipes</h3>
+                      </button>
+                <div class="dropdown-menu p-4 text-dark" id="myRecipes">
+            
+                </div>
+            </div>
+            <h1>Enter your ingredients below!</h1>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="search">
+            </div>
+            <h2 id="checkLabel">Label</h2>
+            <div class="preferences" style="display:none">
+                <div class="checkbox">
+                    <div class id="Balanced">
+                        <label class="checkbox-inline"><input type="checkbox" data-value="&diet=balanced">Balanced</label>
+                    </div>
+                    <div class id="Vegan">
+                        <label class="checkbox-inline"><input type="checkbox" data-value="&diet=vegan">Vegan</label>
+                    </div>
+                    <div class id="Vegetarian">
+                        <label class="checkbox-inline"><input type="checkbox" data-value="&diet=vegetarian">Vegetarian</label>
+                    </div>
+                    <div class id="HighProtein">
+                        <label class="checkbox-inline"><input type="checkbox" data-value="&health=high-protien">High
+                            Protein</label>
+                    </div>
+                    <div class id="LowFat">
+                        <label class="checkbox-inline"><input type="checkbox" data-value="&diet=low-fat">Low Fat</label>
+                    </div>
+                    <div class id="TreeNutFree">
+                        <label class="checkbox-inline"><input type="checkbox" data-value="&health=tree-nut-free">Tree
+                            Nut Free</label>
+                    </div>
+                    <div class id="Alcohol Free">
+                        <label class="checkbox-inline"><input type="checkbox" data-value="&health=alcohol-free">Alcohol
+                            Free</label>
+                    </div>
+                    <div class id="LowCarb">
+                        <label class="checkbox-inline"><input type="checkbox" data-value="&diet=low-carb">Low Carb</label>
+                    </div>
+                    <div class id="PeanutFree">
+                        <label class="checkbox-inline"><input type="checkbox" data-value="&health=peanut-free">Peanut
+                            Free</label>
+                    </div>
+                    <div class id="SugarConscious">
+                        <label class="checkbox-inline"><input type="checkbox" data-value="&health=sugar-conscious">SugarConscious</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default" id="submit">Submit</button>
+            <hr>
+        </div>
+
+
+        <div class="container">
+            <h2>Recipes</h2>
+            <div id="myCarousel" class="carousel slide">
+                <ol class="carousel-indicators" id="carousel-indicators">
+
+                </ol>
+
+
+                <div class="carousel-inner" id="recipeDisp">
+
+                </div>
+
+
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <br>
+            <button id="add-more" class="btn btn-outline-light">Get more recipes</button>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 mx-auto" id="recipe-instructions">
+
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-md-10 mx-auto" id="recipeDetails">
+
+            </div>
+        </div>
+        <div id="edamam-badge" data-color="white"></div>
+
+
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+        <script src="https://developer.edamam.com/attribution/badge.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+        <script src="assets/logic.js"></script>
+</body>
+
+</html>
